@@ -4,6 +4,8 @@ import 'antd/dist/antd.css';
 import { Switch } from 'antd';
 import { useState } from 'react';
 import { MdWbSunny,MdBedtime } from "react-icons/md";
+import 'animate.css';
+
 
 function App() {
 
@@ -23,11 +25,11 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-          <h1 style={{color: color ? '#f2f2f2':'#1a1a1a'}}>Dark Mode</h1>
+          <h1 className='Title' style={{color: color ? '#f2f2f2':'#1a1a1a'}}>Dark Mode</h1>
           </div>
           <br />
           <div className="col-md-6">
-          {color? <MdBedtime style={{fontSize: '5rem', color:'white'}}/> : <MdWbSunny style={{fontSize: '5rem', color:'#ffa31a'}}/>}
+          {color? <MdBedtime className='animate__animated animate__fadeInDown' style={{fontSize: '5rem', color:'white'}}/> : <MdWbSunny className='animate__animated animate__fadeInDown' style={{fontSize: '5rem', color:'#ffa31a'}}/>}
           </div>
         </div>
       </div>
@@ -35,7 +37,7 @@ function App() {
       
       <br />
       <br />
-      <Switch onChange={Check} />
+      <Switch className='Swicth' onChange={Check} />
       <br />
       <br />
     </div>
